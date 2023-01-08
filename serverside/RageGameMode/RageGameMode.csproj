@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <CopyLocalFileLockAssemblies>true</CopyLocalFileLockAssemblies>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <OutputPath>B:\Games\RAGEMP\server-files\dotnet\resources\testmode</OutputPath>
+        <PlatformTarget>x64</PlatformTarget>
+        <DebugType>full</DebugType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="Bootstrapper">
+            <HintPath>B:\Games\RAGEMP\server-files\dotnet\runtime\Bootstrapper.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.0" />
+    </ItemGroup>
+
+</Project>
